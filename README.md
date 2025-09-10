@@ -1,0 +1,1 @@
+Tourist Website is an interactive web platform designed to help travelers explore destinations, plan trips, and book services with ease. The site offers destination guides, travel tips, itinerary planning, and booking tools — all in a user-friendly interface.
