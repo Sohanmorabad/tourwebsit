@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Tourist Paradise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scene">
+        <nav class="navbar">
+            <div class="logo">TourVista</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#tours">Tours</a></li>
+                <li><a href="#accommodation">Hotels</a></li>
+                <li><a href="#festivals">Festivals</a></li>
+                <li><a href="#tracking">Tracking</a></li>
+                <li><a href="#memories">Memories</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="language-selector">
+                <button class="lang-toggle" onclick="toggleLanguageMenu()">🌍 EN ▼</button>
+                <div class="lang-menu" id="langMenu">
+                    <div class="lang-option" onclick="changeLanguage('en')">🇺🇸 English</div>
+                    <div class="lang-option" onclick="changeLanguage('es')">🇪🇸 Español</div>
+                    <div class="lang-option" onclick="changeLanguage('fr')">🇫🇷 Français</div>
+                    <div class="lang-option" onclick="changeLanguage('de')">🇩🇪 Deutsch</div>
+                    <div class="lang-option" onclick="changeLanguage('it')">🇮🇹 Italiano</div>
+                    <div class="lang-option" onclick="changeLanguage('pt')">🇵🇹 Português</div>
+                    <div class="lang-option" onclick="changeLanguage('ru')">🇷🇺 Русский</div>
+                    <div class="lang-option" onclick="changeLanguage('zh')">🇨🇳 中文</div>
+                    <div class="lang-option" onclick="changeLanguage('ja')">🇯🇵 日本語</div>
+                    <div class="lang-option" onclick="changeLanguage('ar')">🇸🇦 العربية</div>
+                </div>
+            </div>
+        </nav>
+
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Amazing Places</h1>
+                <p class="hero-subtitle">Experience the world in 3D</p>
+                <button class="cta-button">Start Your Journey</button>
+            </div>
+
+        </section>
+
+        <section id="destinations" class="destinations">
+            <h2 class="section-title">Popular Destinations</h2>
+            <div class="destination-grid">
+                <div class="destination-cube">
+                    <div class="cube-face front">
+                        <img src="https://images.unsplash.com/photo-1502780402662-acc01917949e?w=400&h=300&fit=crop" alt="Paris">
+                        <h3>Paris</h3>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="info">
+                            <h3>Paris, France</h3>
+                            <p>City of Light and Romance</p>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-cube">
+                    <div class="cube-face front">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400&h=300&fit=crop" alt="Bali">
+                        <h3>Bali</h3>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="info">
+                            <h3>Bali, Indonesia</h3>
+                            <p>Tropical Paradise</p>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-cube">
+                    <div class="cube-face front">
+                        <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop" alt="Dubai">
+                        <h3>Dubai</h3>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="info">
+                            <h3>Dubai, UAE</h3>
+                            <p>Modern Marvel</p>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-cube">
+                    <div class="cube-face front">
+                        <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=400&h=300&fit=crop" alt="Tokyo">
+                        <h3>Tokyo</h3>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="info">
+                            <h3>Tokyo, Japan</h3>
+                            <p>Neon Dreams</p>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-cube">
+                    <div class="cube-face front">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Swiss Alps">
+                        <h3>Swiss Alps</h3>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="info">
+                            <h3>Swiss Alps</h3>
+                            <p>Mountain Paradise</p>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-cube">
+                    <div class="cube-face front">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=300&fit=crop" alt="Maldives">
+                        <h3>Maldives</h3>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="info">
+                            <h3>Maldives</h3>
+                            <p>Crystal Waters</p>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-cube">
+                    <div class="cube-face front">
+                        <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=400&h=300&fit=crop" alt="New York">
+                        <h3>New York</h3>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="info">
+                            <h3>New York, USA</h3>
+                            <p>City That Never Sleeps</p>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-cube">
+                    <div class="cube-face front">
+                        <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=300&fit=crop" alt="Iceland">
+                        <h3>Iceland</h3>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="info">
+                            <h3>Iceland</h3>
+                            <p>Land of Fire & Ice</p>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tours" class="tours">
+            <h2 class="section-title">Featured Tours</h2>
+            <div class="tour-carousel">
+                <div class="tour-card active">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&h=300&fit=crop" alt="Adventure Tour">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Adventure Package</h3>
+                        <p>7 days of thrilling adventures</p>
+                        <span class="price">$1,299</span>
+                    </div>
+                </div>
+                
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=300&fit=crop" alt="Luxury Tour">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Luxury Escape</h3>
+                        <p>5-star comfort and elegance</p>
+                        <span class="price">$2,499</span>
+                    </div>
+                </div>
+                
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop" alt="Cultural Tour">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Cultural Journey</h3>
+                        <p>Immerse in local traditions</p>
+                        <span class="price">$899</span>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="prev-btn">‹</button>
+                <button class="next-btn">›</button>
+            </div>
+        </section>
+
+        <section id="accommodation" class="accommodation">
+            <div class="accommodation-container">
+                <h2 class="section-title">Travel & Accommodation</h2>
+                
+                <div class="location-detector">
+                    <button class="detect-location-btn" onclick="detectLocation()">📍 Find Hotels Near Me</button>
+                    <p class="location-status">Click to detect your location for personalized hotel recommendations</p>
+                </div>
+                
+                <div class="hotel-grid">
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=250&fit=crop" alt="Luxury Hotel">
+                            <div class="hotel-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Grand Palace Hotel</h3>
+                            <p>📍 Downtown - 2.5km from center</p>
+                            <p>🏊 Pool • 🍽️ Restaurant • 🚗 Parking</p>
+                            <div class="hotel-price">$299/night</div>
+                            <button class="book-hotel-btn">Book Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&h=250&fit=crop" alt="Boutique Hotel">
+                            <div class="hotel-rating">⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Boutique Suites</h3>
+                            <p>📍 Arts District - 1.8km from center</p>
+                            <p>🎨 Gallery • ☕ Café • 🌐 WiFi</p>
+                            <div class="hotel-price">$189/night</div>
+                            <button class="book-hotel-btn">Book Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&h=250&fit=crop" alt="Business Hotel">
+                            <div class="hotel-rating">⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Business Center Inn</h3>
+                            <p>📍 Financial District - 3.2km from center</p>
+                            <p>💼 Business Center • 🏋️ Gym • 🚕 Airport Shuttle</p>
+                            <div class="hotel-price">$159/night</div>
+                            <button class="book-hotel-btn">Book Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=250&fit=crop" alt="Resort Hotel">
+                            <div class="hotel-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Seaside Resort</h3>
+                            <p>📍 Beachfront - 5.1km from center</p>
+                            <p>🏖️ Beach Access • 🍹 Bar • 🎾 Tennis</p>
+                            <div class="hotel-price">$399/night</div>
+                            <button class="book-hotel-btn">Book Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=250&fit=crop" alt="Budget Hotel">
+                            <div class="hotel-rating">⭐⭐⭐</div>
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Comfort Lodge</h3>
+                            <p>📍 Suburbs - 4.7km from center</p>
+                            <p>🅿️ Free Parking • 🥐 Breakfast • 🌐 WiFi</p>
+                            <div class="hotel-price">$89/night</div>
+                            <button class="book-hotel-btn">Book Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop" alt="Eco Hotel">
+                            <div class="hotel-rating">⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Eco Green Hotel</h3>
+                            <p>📍 Nature Park - 6.3km from center</p>
+                            <p>🌱 Eco-Friendly • 🚴 Bike Rental • 🌳 Garden</p>
+                            <div class="hotel-price">$129/night</div>
+                            <button class="book-hotel-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="booking">
+            <div class="booking-container">
+                <h2 class="section-title">Book Your Adventure</h2>
+                <div class="booking-form-wrapper">
+                    <form class="booking-form">
+                        <div class="form-row">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" placeholder="Contact Number" required>
+                            <input type="number" placeholder="Number of People" min="1" max="20" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="number" placeholder="Number of Days" min="1" max="30" required>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="number" placeholder="Cost Per Day ($)" min="50" step="10" required>
+                            <input type="number" placeholder="Cost Per Night ($)" min="30" step="10" required>
+                        </div>
+                        <div class="form-row">
+                            <select required>
+                                <option value="">Select Destination</option>
+                                <option value="paris">Paris, France</option>
+                                <option value="bali">Bali, Indonesia</option>
+                                <option value="dubai">Dubai, UAE</option>
+                                <option value="tokyo">Tokyo, Japan</option>
+                                <option value="swiss-alps">Swiss Alps</option>
+                                <option value="maldives">Maldives</option>
+                                <option value="new-york">New York, USA</option>
+                                <option value="iceland">Iceland</option>
+                            </select>
+                            <select required>
+                                <option value="">Select Tour Package</option>
+                                <option value="adventure">Adventure Package - $1,299</option>
+                                <option value="luxury">Luxury Escape - $2,499</option>
+                                <option value="cultural">Cultural Journey - $899</option>
+                            </select>
+                        </div>
+                        <textarea placeholder="Special Requirements or Preferences" rows="4"></textarea>
+                        
+                        <div class="additional-services">
+                            <h3>🚗 Additional Services</h3>
+                            
+                            <div class="services-tabs">
+                                <button class="service-tab active" onclick="showService('rentals')">🚗 Rentals</button>
+                                <button class="service-tab" onclick="showService('tickets')">🎫 Tickets</button>
+                            </div>
+                            
+                            <div class="service-content" id="rentals">
+                                <h4>Vehicle Rentals</h4>
+                                <div class="rental-options">
+                                    <div class="rental-item">
+                                        <input type="checkbox" id="car-rental">
+                                        <label for="car-rental">🚗 Car Rental - $45/day</label>
+                                    </div>
+                                    <div class="rental-item">
+                                        <input type="checkbox" id="bike-rental">
+                                        <label for="bike-rental">🏍️ Motorcycle - $25/day</label>
+                                    </div>
+                                    <div class="rental-item">
+                                        <input type="checkbox" id="bicycle-rental">
+                                        <label for="bicycle-rental">🚲 Bicycle - $10/day</label>
+                                    </div>
+                                    <div class="rental-item">
+                                        <input type="checkbox" id="scooter-rental">
+                                        <label for="scooter-rental">🛵 Scooter - $20/day</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="service-content" id="tickets" style="display: none;">
+                                <h4>Attraction Tickets</h4>
+                                <div class="ticket-options">
+                                    <div class="ticket-item">
+                                        <input type="checkbox" id="museum-ticket">
+                                        <label for="museum-ticket">🏛️ Museum Pass - $30/person</label>
+                                    </div>
+                                    <div class="ticket-item">
+                                        <input type="checkbox" id="theme-park">
+                                        <label for="theme-park">🎢 Theme Park - $85/person</label>
+                                    </div>
+                                    <div class="ticket-item">
+                                        <input type="checkbox" id="city-tour">
+                                        <label for="city-tour">🚌 City Tour Bus - $40/person</label>
+                                    </div>
+                                    <div class="ticket-item">
+                                        <input type="checkbox" id="boat-cruise">
+                                        <label for="boat-cruise">🚢 Boat Cruise - $65/person</label>
+                                    </div>
+                                    <div class="ticket-item">
+                                        <input type="checkbox" id="cable-car">
+                                        <label for="cable-car">🚠 Cable Car - $25/person</label>
+                                    </div>
+                                    <div class="ticket-item">
+                                        <input type="checkbox" id="observatory">
+                                        <label for="observatory">🔭 Observatory - $20/person</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-section">
+                            <h3>Secure Payment Methods</h3>
+                            
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="card" required>
+                                    <span>Credit/Debit Card</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="cash" required>
+                                    <span>Cash Payment</span>
+                                </label>
+                            </div>
+                            
+                            <div class="card-payment" id="card-payment">
+                                <div class="form-row">
+                                    <input type="text" placeholder="Card Number" maxlength="19">
+                                    <input type="text" placeholder="Cardholder Name">
+                                </div>
+                                <div class="form-row">
+                                    <input type="text" placeholder="MM/YY" maxlength="5">
+                                    <input type="text" placeholder="CVV" maxlength="4">
+                                </div>
+                                <div class="card-types">
+                                    <span>💳 Visa</span>
+                                    <span>💳 MasterCard</span>
+                                    <span>💳 American Express</span>
+                                    <span>💳 Discover</span>
+                                </div>
+                            </div>
+                            
+                            <div class="cash-payment" id="cash-payment" style="display: none;">
+                                <p>💰 Pay in cash at our office or upon arrival</p>
+                                <p>📍 Office: 123 Travel Street, City Center</p>
+                            </div>
+                            
+                            <div class="discount-section">
+                                <div class="form-row">
+                                    <input type="text" placeholder="Discount Coupon Code">
+                                    <button type="button" class="apply-coupon-btn">Apply</button>
+                                </div>
+                            </div>
+                            
+                            <div class="total-section">
+                                <div class="total-row">
+                                    <span>Subtotal:</span>
+                                    <span id="subtotal">$0</span>
+                                </div>
+                                <div class="total-row">
+                                    <span>Discount:</span>
+                                    <span id="discount">-$0</span>
+                                </div>
+                                <div class="total-row final-total">
+                                    <span>Total Amount:</span>
+                                    <span id="total">$0</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="booking-submit-btn">🔒 Secure Payment</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="festivals" class="festivals">
+            <div class="festivals-container">
+                <h2 class="section-title">Special Festivals & Events</h2>
+                <p class="festivals-subtitle">Plan your perfect vacation around amazing festivals worldwide</p>
+                
+                <div class="festivals-grid">
+                    <div class="festival-card">
+                        <div class="festival-image">
+                            <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400&h=250&fit=crop" alt="Diwali">
+                            <div class="festival-date">Oct-Nov</div>
+                        </div>
+                        <div class="festival-info">
+                            <h3>🪔 Diwali Festival</h3>
+                            <p>📍 India</p>
+                            <p>Experience the Festival of Lights with stunning decorations and celebrations</p>
+                            <button class="festival-book-btn">Book Festival Trip</button>
+                        </div>
+                    </div>
+                    
+                    <div class="festival-card">
+                        <div class="festival-image">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop" alt="Christmas">
+                            <div class="festival-date">December</div>
+                        </div>
+                        <div class="festival-info">
+                            <h3>🎄 Christmas Markets</h3>
+                            <p>📍 Germany</p>
+                            <p>Magical Christmas markets with festive atmosphere and winter charm</p>
+                            <button class="festival-book-btn">Book Festival Trip</button>
+                        </div>
+                    </div>
+                    
+                    <div class="festival-card">
+                        <div class="festival-image">
+                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=250&fit=crop" alt="Cherry Blossom">
+                            <div class="festival-date">March-May</div>
+                        </div>
+                        <div class="festival-info">
+                            <h3>🌸 Cherry Blossom</h3>
+                            <p>📍 Japan</p>
+                            <p>Witness the breathtaking beauty of sakura season in full bloom</p>
+                            <button class="festival-book-btn">Book Festival Trip</button>
+                        </div>
+                    </div>
+                    
+                    <div class="festival-card">
+                        <div class="festival-image">
+                            <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=250&fit=crop" alt="Northern Lights">
+                            <div class="festival-date">Sep-Mar</div>
+                        </div>
+                        <div class="festival-info">
+                            <h3>🌌 Northern Lights</h3>
+                            <p>📍 Iceland/Norway</p>
+                            <p>Chase the magical Aurora Borealis in the Arctic wilderness</p>
+                            <button class="festival-book-btn">Book Festival Trip</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vacation-planner">
+                    <h3>🗓️ Best Time to Visit</h3>
+                    <div class="season-grid">
+                        <div class="season-card spring">
+                            <h4>🌸 Spring (Mar-May)</h4>
+                            <p>Perfect for: Japan, Europe, India</p>
+                            <p>Weather: Mild & Pleasant</p>
+                        </div>
+                        <div class="season-card summer">
+                            <h4>☀️ Summer (Jun-Aug)</h4>
+                            <p>Perfect for: Europe, Scandinavia, Russia</p>
+                            <p>Weather: Warm & Sunny</p>
+                        </div>
+                        <div class="season-card autumn">
+                            <h4>🍂 Autumn (Sep-Nov)</h4>
+                            <p>Perfect for: India, Nepal, Southeast Asia</p>
+                            <p>Weather: Cool & Comfortable</p>
+                        </div>
+                        <div class="season-card winter">
+                            <h4>❄️ Winter (Dec-Feb)</h4>
+                            <p>Perfect for: Dubai, Thailand, Australia</p>
+                            <p>Weather: Mild & Dry</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tracking" class="tracking">
+            <div class="tracking-container">
+                <h2 class="section-title">Family Tracking System</h2>
+                <p class="tracking-subtitle">Keep your loved ones safe with real-time location tracking</p>
+                
+                <div class="tracking-features">
+                    <div class="feature-card">
+                        <div class="feature-icon">📍</div>
+                        <h3>Live Location</h3>
+                        <p>Real-time GPS tracking of family members during trips</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔔</div>
+                        <h3>Safety Alerts</h3>
+                        <p>Instant notifications when someone reaches their destination</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🗺️</div>
+                        <h3>Route History</h3>
+                        <p>View complete travel history and visited locations</p>
+                    </div>
+                </div>
+                
+                <div class="tracking-setup">
+                    <h3>🔗 Connect Your Family</h3>
+                    <div class="family-form">
+                        <div class="form-row">
+                            <input type="text" placeholder="Family Member Name" required>
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="email" placeholder="Email Address" required>
+                            <select required>
+                                <option value="">Relationship</option>
+                                <option value="spouse">Spouse</option>
+                                <option value="child">Child</option>
+                                <option value="parent">Parent</option>
+                                <option value="sibling">Sibling</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <button class="add-member-btn">📱 Send Tracking Invite</button>
+                    </div>
+                </div>
+                
+                <div class="tracking-dashboard">
+                    <h3>👨‍👩‍👧‍👦 Family Dashboard</h3>
+                    <div class="family-members">
+                        <div class="member-card active">
+                            <div class="member-avatar">👨</div>
+                            <div class="member-info">
+                                <h4>John Smith</h4>
+                                <p>📍 Paris, France</p>
+                                <span class="status online">🟢 Online</span>
+                            </div>
+                            <button class="track-btn">Track</button>
+                        </div>
+                        
+                        <div class="member-card">
+                            <div class="member-avatar">👩</div>
+                            <div class="member-info">
+                                <h4>Sarah Smith</h4>
+                                <p>📍 Tokyo, Japan</p>
+                                <span class="status online">🟢 Online</span>
+                            </div>
+                            <button class="track-btn">Track</button>
+                        </div>
+                        
+                        <div class="member-card">
+                            <div class="member-avatar">👧</div>
+                            <div class="member-info">
+                                <h4>Emma Smith</h4>
+                                <p>📍 Bali, Indonesia</p>
+                                <span class="status offline">🔴 Offline</span>
+                            </div>
+                            <button class="track-btn">Track</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="emergency-features">
+                    <h3>🚨 Emergency Features</h3>
+                    <div class="emergency-grid">
+                        <button class="emergency-btn panic">🆘 Panic Button</button>
+                        <button class="emergency-btn sos">📞 Emergency Call</button>
+                        <button class="emergency-btn share">📤 Share Location</button>
+                        <button class="emergency-btn geofence">🚧 Set Safe Zones</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="memories" class="memories">
+            <div class="memories-container">
+                <h2 class="section-title">Travel Memories Studio</h2>
+                <p class="memories-subtitle">Create stunning reels and videos from your travel adventures</p>
+                
+                <div class="studio-features">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎥</div>
+                        <h3>Video Editor</h3>
+                        <p>Professional editing tools with filters, transitions, and effects</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎵</div>
+                        <h3>Music Library</h3>
+                        <p>Thousands of royalty-free tracks and sound effects</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <h3>AI Effects</h3>
+                        <p>Smart filters and automatic scene detection</p>
+                    </div>
+                </div>
+                
+                <div class="video-creator">
+                    <h3>🎨 Create Your Reel</h3>
+                    <div class="creator-interface">
+                        <div class="media-upload">
+                            <div class="upload-area">
+                                <div class="upload-icon">📷</div>
+                                <p>Drag & Drop Photos/Videos</p>
+                                <button class="upload-btn">Browse Files</button>
+                            </div>
+                        </div>
+                        
+                        <div class="editing-tools">
+                            <h4>🔧 Editing Tools</h4>
+                            <div class="tools-grid">
+                                <button class="tool-btn">✂️ Trim</button>
+                                <button class="tool-btn">🌈 Filters</button>
+                                <button class="tool-btn">🎵 Music</button>
+                                <button class="tool-btn">🔤 Text</button>
+                                <button class="tool-btn">✨ Effects</button>
+                                <button class="tool-btn">🔄 Transitions</button>
+                                <button class="tool-btn">🎨 Stickers</button>
+                                <button class="tool-btn">📱 Export</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="templates-section">
+                    <h3>🎆 Ready Templates</h3>
+                    <div class="templates-grid">
+                        <div class="template-card">
+                            <div class="template-preview">
+                                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=300&h=400&fit=crop" alt="Adventure Template">
+                                <div class="play-overlay">▶️</div>
+                            </div>
+                            <h4>Adventure Reel</h4>
+                            <p>Perfect for outdoor activities</p>
+                            <button class="use-template-btn">Use Template</button>
+                        </div>
+                        
+                        <div class="template-card">
+                            <div class="template-preview">
+                                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=300&h=400&fit=crop" alt="Luxury Template">
+                                <div class="play-overlay">▶️</div>
+                            </div>
+                            <h4>Luxury Travel</h4>
+                            <p>Elegant style for premium trips</p>
+                            <button class="use-template-btn">Use Template</button>
+                        </div>
+                        
+                        <div class="template-card">
+                            <div class="template-preview">
+                                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=300&h=400&fit=crop" alt="Cultural Template">
+                                <div class="play-overlay">▶️</div>
+                            </div>
+                            <h4>Cultural Journey</h4>
+                            <p>Showcase local traditions</p>
+                            <button class="use-template-btn">Use Template</button>
+                        </div>
+                        
+                        <div class="template-card">
+                            <div class="template-preview">
+                                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300&h=400&fit=crop" alt="Beach Template">
+                                <div class="play-overlay">▶️</div>
+                            </div>
+                            <h4>Beach Vibes</h4>
+                            <p>Tropical and relaxing theme</p>
+                            <button class="use-template-btn">Use Template</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sharing-options">
+                    <h3>📤 Share Your Memories</h3>
+                    <div class="share-buttons">
+                        <button class="share-btn instagram">📷 Instagram</button>
+                        <button class="share-btn tiktok">🎵 TikTok</button>
+                        <button class="share-btn youtube">📺 YouTube</button>
+                        <button class="share-btn facebook">🔗 Facebook</button>
+                        <button class="share-btn download">💾 Download</button>
+                        <button class="share-btn cloud">☁️ Save to Cloud</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="particles"></div>
+    
+    <!-- AI Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <div class="bot-avatar">🤖</div>
+            <div class="bot-info">
+                <h4>TourVista AI Assistant</h4>
+                <span class="bot-status">Online</span>
+            </div>
+            <button class="close-chat" onclick="toggleChat()">✕</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    👋 Hi! I'm your travel assistant. Ask me about destinations, bookings, hotels, or any travel questions!
+                </div>
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="chatInput" placeholder="Ask me anything about your travel..." onkeypress="handleChatInput(event)">
+            <button onclick="sendMessage()">📤</button>
+        </div>
+    </div>
+    
+    <button class="chat-toggle" onclick="toggleChat()">
+        💬
+        <span class="chat-notification">1</span>
+    </button>
+    
+    <script src="javascript.js"></script>
+</body>
+</html>
